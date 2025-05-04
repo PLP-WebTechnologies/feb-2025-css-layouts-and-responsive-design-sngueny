@@ -1,52 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Webpage</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout with Flexbox and Grid</title>
+    </head>
 <body>
-
-  <!-- Navigation Bar -->
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- Navigation Bar with Flexbox -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">FlexGrid</div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <section id="home">
-      <h1>Welcome to Our Website</h1>
-      <p>This is a sample of a responsive webpage designed with Flexbox, Grid, and Media Queries.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Modern Web Layout With Flexbox & Grid</h1>
+            <p>Create responsive, flexible layouts with the power of CSS Flexbox and Grid. Perfect for any device, any screen size.</p>
+        </div>
     </section>
 
-    <section id="services" class="grid-container">
-      <div class="service-box">Database Design</div>
-      <div class="service-box">Web Development</div>
-      <div class="service-box">Cyber Security</div>
+    <!-- Features Section with CSS Grid -->
+    <section class="features" id="features">
+        <div class="features-heading">
+            <h2>Key Features</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Flexbox Layout</h3>
+                <p>Flexbox makes designing flexible responsive layout structures without using float or positioning easy and intuitive.</p>
+            </div>
+            <div class="feature-card">
+                <h3>CSS Grid</h3>
+                <p>Grid Layout offers a grid-based layout system with rows and columns, making it easier to design complex web pages.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Responsive Design</h3>
+                <p>Media queries allow content to adapt to various screen sizes and device types for optimal viewing experience.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>Learn more about our company and what we do.</p>
+    <!-- Projects Section with Flexbox -->
+    <section class="projects" id="projects">
+        <div class="projects-heading">
+            <h2>Recent Projects</h2>
+        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <div class="project-img">Project Image</div>
+                <div class="project-content">
+                    <h3>E-commerce Layout</h3>
+                    <p>A responsive e-commerce site using Flexbox for product listings and navigation.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">Project Image</div>
+                <div class="project-content">
+                    <h3>Portfolio Grid</h3>
+                    <p>A masonry-style portfolio grid layout using CSS Grid for perfect alignment.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">Project Image</div>
+                <div class="project-content">
+                    <h3>Mobile App Landing</h3>
+                    <p>A responsive landing page that looks great on all devices from mobile to desktop.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Get in touch with us through our contact form or email.</p>
-    </section>
-  </main>
+    <!-- Footer with Flexbox -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We specialize in creating modern, responsive web layouts using the latest CSS techniques.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li>Email: info@example.com</li>
+                    <li>Phone: (254) 712-456-7890</li>
+                    <li>Address: Nairobi</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 SNK. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <footer>
-    <p>&copy; 2025 Responsive Web Design</p>
-  </footer>
-
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
